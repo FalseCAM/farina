@@ -2,6 +2,7 @@ package farina.game;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.scene.Node;
+import com.jme3.scene.Spatial;
 import com.jme3.scene.plugins.blender.BlenderModelLoader;
 
 /**
@@ -20,5 +21,7 @@ public class Flower extends Node {
     }
 
     private void create() {
+        Spatial spatial = assetManager.loadModel("Models/flower.blend");
+        this.attachChild(spatial);
     }
 }
